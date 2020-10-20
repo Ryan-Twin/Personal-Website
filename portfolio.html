@@ -1,0 +1,141 @@
+<!-- Contact page of personal website.
+      Version: 9/17/2020 -->
+
+<html lang="en">
+
+<head>
+    <title>Portfolio | Ryan Towle's Homepage</title>
+    <link rel="icon" href="images/Icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <script src="scripts/default.js"></script>
+
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+
+<body>
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a class="border overlay-link" onclick="closeNav()" href="http://ryantowle.com">Home</a>
+        <a class="border overlay-link" onclick="closeNav()" href="portfolio.html">Portfolio</a>
+        <a class="border overlay-link" onclick="closeNav()" href="contact.html">Contact</a>
+    </div>
+</div>
+
+<header class="navbar-wrapper">
+    <nav class="header navbar navbar-inverse bg-transparent">
+        <div class="container-fluid navigation">
+            <div class="navbar-title">
+                <a href="http://ryantowle.com">
+                    <picture>
+                        <source srcset="images/Logo.webp" type="image/webp">
+                        <source srcset="images/Logo.png" type="image/png">
+                        <img src="images/Logo.png" class="navbar-logo" alt="Logo">
+                    </picture>
+                </a>
+                <a class="navbar-brand" href="http://ryantowle.com">Ryan Towle—<small>Designer, Programmer, Competitor</small></a>
+            </div>
+
+            <button class="btn btn-outline-primary btn-lg shadow-none" id="menu-button" onclick="openNav()">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section class="content">
+    <div class="portfolio-header">
+        <h2>My Portfolio</h2>
+        <hr>
+        <h4>Design Focus</h4>
+    </div>
+    <div class="portfolio-card align-left">
+        <div class="card-thumbnail">
+            <picture>
+                <source srcset="images/portfolio-thumbnails/Personal-Website-Thumbnail.webp" type="image/webp">
+                <img src="images/portfolio-thumbnails/Personal-Website-Thumbnail.png" id="personal-website-thumbnail" alt="Personal Website Thumbnail">
+            </picture>
+        </div>
+        <div class="card-text">
+            <h4 class="card-header">Personal Website</h4>
+            <p class="card-subtext">Developed from scratch, this personal website is a product of my prior experience with design and web programming.
+                It utilizes primarily HTML5, CSS and Javascript, running on top of <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, and <a href="https://aws.amazon.com/" target="_blank">AWS S3/Route 53</a> for hosting.
+                                        Naturally, its design reflects on my own aesthetic interests, which were realized using Photoshop.</p>
+            <p class="card-link">You can find the source code on <a href="https://github.com/Ryan-Twin/Personal-Website" target="_blank">Github</a>.</p>
+        </div>
+    </div>
+    <div class="portfolio-card align-right">
+        <div class="card-thumbnail">
+            <picture>
+                <source srcset="images/portfolio-thumbnails/YouQueue-Thumbnail.webp" type="image/webp">
+                <img src="images/portfolio-thumbnails/YouQueue-Thumbnail.png" id="youqueue-thumbnail" alt="YouQueue Thumbnail">
+            </picture>
+        </div>
+        <div class="card-text">
+            <h4 class="card-header">YouQueue Wireframes</h4>
+            <p class="card-subtext">An assignment for my <i>Intro to GUI Programming/Graphics</i> course, this set of wireframes is a perfect example of my ability to design simple and efficient user experiences.
+                                        They illustrate a tool designed to enhance watching videos at a gathering, by giving a group of friends a queue for enabling video submissions
+                                        through mobile devices. After its initial iteration, it was then updated using partner-gathered feedback and redesigned.</p>
+            <p class="card-link">The updated wireframes are available to view at <a href="https://balsamiq.cloud/svurtj6/p4phc98" target="_blank">Balsamiq</a>.</p>
+        </div>
+    </div>
+    <div class="portfolio-header">
+        <hr>
+        <h4>Implementation Focus</h4>
+    </div>
+    <div class="portfolio-card align-left">
+        <div class="card-thumbnail">
+            <picture>
+                <source srcset="images/portfolio-thumbnails/CollBox-Thumbnail.webp" type="image/webp">
+                <img src="images/portfolio-thumbnails/CollBox-Thumbnail.png" id="collbox-thumbnail" alt="CollBox Thumbnail">
+            </picture>
+        </div>
+        <div class="card-text">
+            <h4 class="card-header">Remittance Reporter</h4>
+            <p class="card-subtext">Over the course of Summer 2020, I interned at <a href="https://collbox.co/" target="_blank">CollBox</a>, a small startup in the live music capital of the world, Austin, TX.
+                While I developed many of my skills there, I spent the majority of my time working on a Remittance Reporter, or simply put, a tool to help keep track of
+                payments received by their partners. The tool is written in <a href="https://clojure.org/" target="_blank">Clojure</a>, from the ground up.</p>
+            <p class="card-link">References and sample code are available <a href="contact.html" target="_blank">upon request</a>.</p>
+        </div>
+    </div>
+    <div class="portfolio-card align-right">
+        <div class="card-thumbnail">
+            <picture>
+                <source srcset="images/portfolio-thumbnails/Cloud-Thumbnail.webp" type="image/webp">
+                <img src="images/portfolio-thumbnails/Cloud-Thumbnail.png" id="cloud-thumbnail" alt="Cloud Thumbnail">
+            </picture>
+        </div>
+        <div class="card-text">
+            <h4 class="card-header">MEAN Stack Registration Service</h4>
+            <p class="card-subtext">This current semester, as part of my <i>Cloud Software Development</i> course, I've been slowly building upon a web-based registration service.
+                                    Being primarily implementation focused, this project has led me to integrating Angular, Node.js, Express, and MongoDB to create a MEAN stack
+                                    course registration service, which I'll be continuing to add features to through the end of the semester.</p>
+            <p class="card-link">Sample code is available <a href="contact.html" target="_blank">upon request</a>.</p>
+        </div>
+    </div>
+</section>
+
+<svg class="stripes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1650 169.3">
+    <g data-name="Stripe 1">
+        <path class="stripe-1" d="M0 0.7C379 111.4 1287.3 119.5 1606.5 56.8c-438 107.1-1120.6 97.8-1654 9.8Z"/>
+    </g>
+    <g data-name="Stripe 2">
+        <path class="stripe-2" d="M0 159.8c788.1-46.6 1089.8-43.8 1601 9C1254.7 88.3 762.7 68.3 0 90.8Z"/>
+    </g>
+    <g data-name="Stripe 3">
+        <path class="stripe-3" d="M0 34.8c788-33 1243.8-44 1404 0-518-18.3-932.1 21.3-1434 67Z"/>
+    </g>
+</svg>
+</body>
+</html>
