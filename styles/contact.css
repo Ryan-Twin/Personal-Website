@@ -1,0 +1,43 @@
+.main-text-container {
+    /* Positioning of main text area for desktop. */
+    padding-top: 9%;
+    width: 50%;
+    margin: auto;
+}
+
+.personal-photo-container {
+    width: 40%;
+    margin: auto;
+}
+
+.socials {
+    margin-left: 4%
+}
+
+.socials a {
+    float: left;
+}
+
+.personal-photo {
+    max-width: 100%;
+}
+
+#resume-btn {
+    margin: 0 0 1em 1%;
+}
+
+.module {
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-text-container {width: 100%; padding: 5% 5% 0 5%}
+    .personal-photo-container {width: 100%}
+    .personal-photo {min-width: 100%}
+    .socials {width: 20%; margin: auto; display: flex; justify-content: space-around}
+    .socials a {float: none}
+}
+
+@media screen and (max-width: 450px) {
+    .content {margin-top: 4%}
+}

@@ -1,0 +1,45 @@
+/* CSS Corresponding to index.html.
+    Version: 9/13/2020 */
+
+/* Set the flow of the page. */
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+}
+
+.personal-photo-container {
+    flex: 1;
+    order: 2;
+}
+
+.personal-photo {
+    max-width: 100%; /* Prevent spill onto rest of page. */
+}
+
+.main-text-container {
+    flex: 1;
+    order: 1;
+    /* Positioning of main text area for desktop. */
+    padding-top: 6%;
+    margin: 5% 5% 0 5%;
+}
+
+.socials a {
+    float: left;
+}
+
+/* Readjust page layout for smaller devices. */
+@media screen and (max-width: 1200px) {
+    .content {flex-wrap: wrap}
+    .main-text-container {flex-basis: 100%; padding-top: 5%}
+    .socials {width: 20%; margin: auto; display: flex; justify-content: space-around}
+    .socials a {float: none}
+}
+
+/* Shrink introduction text for mobile devices. */
+@media screen and (max-width: 450px) {
+    .main-text-container h1 {
+        font-size: 32px;
+    }
+}

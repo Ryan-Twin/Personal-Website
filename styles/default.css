@@ -1,0 +1,173 @@
+/* Default Styling for all pages.
+    Version: 9/13/2020 */
+
+/* GENERAL */
+/* Set default text appearance. */
+* {
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #6e6bff;
+}
+
+/* Remove outline around selected text. */
+a:focus, a:active {
+    outline: 0;
+    border: none;
+}
+
+/* HEADER */
+.navbar-wrapper {
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.45));
+}
+
+.header {
+    box-shadow: 0 8px 6px -6px #4f4f4f;
+}
+
+/* Set size of logo in navbar. */
+.navbar-logo {
+    max-height: 60px;
+    margin-right: 14px;
+}
+
+/* Text and color properties for title. */
+.navbar-brand {
+    font-weight: normal;
+    color: #6e6bff;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #6e6bff;
+}
+
+/* Color properties for overlay button. */
+.btn-outline-primary, .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited {
+    color: #6e6bff !important;
+    border-color: #6e6bff !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active {
+    color: #fff !important;
+    background-color: #6e6bff !important;
+}
+
+/* OVERLAY */
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide up or down the overlay */
+}
+
+/* Position content inside overlay. */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* Position navigation links inside overlay. */
+.overlay a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Position the close button (top right corner). */
+.overlay .closebtn {
+    position: absolute;
+    padding: 2%;
+    top: 10px;
+    right: 45px;
+    font-size: 60px;
+    color: #f1f1f1;
+}
+
+/* Formatting and color of links inside overlay. */
+.overlay-link {
+    transition: 0.3s; /* Transition effects on hover (color) */
+    width: 80%;
+    padding: 2%;
+    margin: auto;
+    font-size: 36px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.overlay-link:link, .overlay-link:visited {
+    color: #1f1f1f;
+}
+
+.overlay-link:hover, .overlay link:focus {
+    color: #f1f1f1;
+}
+
+/* BODY */
+body {
+    background-color: #f1fffd;
+}
+
+/* Positioning for all stripes to start at. */
+.stripes {
+    position: -webkit-sticky;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 47px;
+    z-index: -1;
+    margin-left: -15px;
+}
+
+/* Color for all stripes. */
+.stripe-1 {
+    fill: #ff0;
+    opacity: 0.25;
+}
+
+.stripe-2 {
+    fill: #f0f;
+    opacity: 0.25;
+}
+
+.stripe-3 {
+    fill: #0ff;
+    opacity: 0.25;
+}
+
+/* Formatting and color properties for social media links. */
+.social-logo {
+    max-height: 55px;
+    margin: 10px;
+}
+
+.social-logo:hover {
+    background-color: #c0bfff;
+    transition: 0.5s;
+}
+
+/* Overlay formatting for short screens. */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;}
+}
+
+/* Formatting for navbar and overlay on small devices. */
+@media screen and (max-width: 600px) {
+    .navbar-logo {
+        max-height: 35px;
+        margin-right: 7px;}
+    .navbar-brand {font-size: 16px;}
+    #small-text {
+        text-indent: -9999px;}
+    .overlay-link {color: #f1f1f1}
+}

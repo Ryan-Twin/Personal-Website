@@ -1,0 +1,75 @@
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 9%;
+}
+
+.navbar-logo {
+    color: white;
+}
+
+.portfolio-header {
+    margin-bottom: 1em;
+    width: 50%;
+    text-align: left;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 4em;
+}
+
+.card-thumbnail {
+    text-align: center;
+    flex: 3;
+}
+
+.card-thumbnail * {
+    width: 66%;
+}
+
+.card-text {
+    flex: 7;
+}
+
+.card-header {
+    margin-bottom: 0.5em;
+}
+
+.card-subtext {
+    margin-bottom: 3em;
+}
+
+.portfolio-card.align-left .card-thumbnail {
+    order: 1;
+}
+
+.portfolio-card.align-right .card-thumbnail {
+    order: 2;
+}
+
+.portfolio-card.align-left .card-text {
+    text-align: left;
+    order: 2;
+}
+
+.portfolio-card.align-right .card-text {
+    text-align: right;
+    order: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {padding-top: 7%}
+    .portfolio-header {width: 90%}
+    .portfolio-card {width: 90%; flex-direction: column}
+    .portfolio-card.align-right .card-text {text-align: left}
+    .card-thumbnail * {width: 40%; margin-bottom: 1em}
+}
+
+@media screen and (max-width: 450px) {
+    .content {margin-top: 4%}
+}
